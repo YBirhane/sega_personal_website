@@ -1,9 +1,49 @@
 import logo from './logo.svg';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { Box, Grid, Stack, Tab, Tabs, Typography } from '@mui/material';
+import { AppBar, Box, Divider, Grid, IconButton, Stack, Tab, Tabs, Typography } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
-import FilterVintageIcon from '@mui/icons-material/FilterVintage';
 import './App.css';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import MailIcon from '@mui/icons-material/Mail';
+import FilterVintageIcon from '@mui/icons-material/FilterVintage';
+
+import { styled } from '@mui/system';
+import HomePage from './pages/HomePage'
+import NameAndNavigationBar from './components/NameAndNavigationBar'
+
+function WavyDivider() {
+  return (
+    <Box
+      sx={{
+        width: '100%',
+        height: '30px',  // Increased height to accommodate taller waves
+        overflow: 'hidden',
+        lineHeight: 0,
+        marginTop: '30px',
+        marginBottom: '-6px',
+      }}
+    >
+      <svg
+        viewBox="0 0 1200 50"  // Adjusted viewBox for taller peaks
+        preserveAspectRatio="none"
+        style={{
+          width: '100%',
+          height: '100%',
+          fill: 'none',         // No fill for the wave
+          stroke: '#b4bb73',    // The color of the wave
+          strokeWidth: 2,       // Keep the stroke thin like MUI Divider
+        }}
+      >
+        <path
+          d="M0,25 C30,0 60,50 90,25 C120,0 150,50 180,25 C210,0 240,50 270,25 C300,0 330,50 360,25 C390,0 420,50 450,25 C480,0 510,50 540,25 C570,0 600,50 630,25 C660,0 690,50 720,25 C750,0 780,50 810,25 C840,0 870,50 900,25 C930,0 960,50 990,25 C1020,0 1050,50 1080,25 C1110,0 1140,50 1170,25 C1200,0 1230,50 1260,25"
+        />
+      </svg>
+    </Box>
+  );
+}
+
+
 
 
 function App() {
@@ -17,6 +57,9 @@ function App() {
             },
             secondary: {
               main: '#FD9584',
+            },
+            third: {
+              main: '#b4bb73'
             },
             background: {
               paper: '#ffffff',
@@ -69,73 +112,46 @@ function App() {
                         ].join(',')
                     }
                 }
+            },
+            MuiDivider: {
+                styleOverrides: {
+                    root: {
+                        color: '#da8129'
+                    }
+                }
             }
         }
     })
+
     return (
         <ThemeProvider theme={theme}>
             <CssBaseline />
-            <Stack alignItems="center" direction="row" sx={{display: 'flex', width: '100%'}}>
-                <Grid container>
-                    <Grid item xs={8} sx={{pl:1}}>
-                        <Stack alignItems="center" direction="row" >
-                            <FilterVintageIcon sx={{mt:2.5, ml:1, color: '#b4bb73'}} />
-                            <Typography sx={{alignContent: 'center', pl: 1, pt:2, fontFamily: "Berkshire Swash"}} variant='h4' color="primary.main"> Sega Birhane</Typography>
-                            <FilterVintageIcon sx={{mt:2.5, ml:1, color: '#b4bb73'}} />
-                        </Stack>
-                    </Grid>
-                    <Grid item xs={4}>
-                        <Tabs
-                            sx={{
-                                '& .MuiTabs-indicator': {
-                                    display: 'none', // This hides the default underline
-                                },
-                                justifyContent: 'flex-end',
-                                alignItems: 'flex-end',
-                                mt:1,
-                            }}
-                            value={0}
-                        >
-                            <Tab  label="About Me"/>
-                            <Tab  label="projects"/>
-                            <Tab  label="resume"/>
-                            <Tab  label="contact me"/>
-                        </Tabs>
-                    </Grid>
-                </Grid>
-             </Stack>
-             <Grid container sx={{mt:8}} spacing={0.5}>
-                <Grid item sx={{display: 'flex', alignContent: 'center', justifyContent: 'left', ml:5, pr:0}} xs={4}>
-                        <Box sx={{width: '375px', height: "500px", border: '15px solid #Cdd9C5' }}>
-                            <img style={{border: '15px solid #D9CCE0'}} width="375" height="500" src="ProfilePic.JPG"/>
+            <Box sx={{display: 'flex', flexDirection: 'column', minHeight: '100vh'}}>
+                <Box sx={{flexGrow:1}}>
+                    <NameAndNavigationBar />
+                    <HomePage />
+                 </Box>
+                <Box sx={{display: 'flex', flexDirection: 'column', justifyContent: 'flex-end'}}>
+                    <WavyDivider sx={{width: '100%'}}/>
+                    <Stack direction="row">
+                        <Box sx={{pl:1, width: "100%", pb:'0px'}}>
+                                {/* Put your left-side content here */}
+                                <Typography color="primary" variant="subtitle2" sx={{fontStyle:'italic'}}>Created by <a href="https://github.com/YBirhane" style={{color:'#b4bb73'}} target="_blank">Yeabtsega Birhane</a> with <a href="https://mui.com/material-ui/getting-started/" style={{color:'#b4bb73'}} target="_blank">MUI React Library</a> </Typography>
                         </Box>
-                </Grid>
-                <Grid item sx={{display: 'flex', alignContent: 'center', justifyContent: 'center'}} xs={7} >
-                    <Stack spacing={2}>
-                        <Typography
-                            variant="h4"
-                            sx={{fontWeight: 'bold', pl:0,pr:0 }}
-                            align="center"
-                            color="secondary"
-                        >
-                            Full stack developer creating beautiful products with technical rigor and user empathy.
-                        </Typography>
-                        <Typography
-                            variant="h6"
-                            color="primary"
-                        >
-                        Hello, I’m Yeabtsega Birhane—you can call me Sega. I’m currently a contract Software Engineer at <a href="https://www.movementhealthscience.com/" style={{color:'#b4bb73'}} target="_blank">Movement Health Science</a>.
-                        <br />
-                        <br />
-                        I have over three years of experience as a Full Stack Engineer, working with technologies like React, Vue, CSS, JavaScript, Django, and Python. I graduated from <a href="https://www.hmc.edu/" style={{color:'#b4bb73'}} target="_blank">Harvey Mudd College</a> in 2020 with a degree in Computer Science and Math.
-                        <br />
-                        <br />
-                        Feel free to check out my resume [here], my projects[here], and don’t hesitate to reach out via email with any questions or inquiries.
-
-                        </Typography>
+                        <Box sx={{display: 'flex'}}>
+                            <IconButton sx={{paddingTop:0}} color="third" onClick={() => window.open('https://www.linkedin.com/in/yeabtsega-birhane/', "_blank")}>
+                                <LinkedInIcon />
+                            </IconButton>
+                            <IconButton sx={{paddingTop:0}} color="third" onClick={() => window.open('https://github.com/YBirhane', "_blank")}>
+                                <GitHubIcon />
+                            </IconButton>
+                            <IconButton sx={{paddingTop:0}} color="third" onClick={() => window.open("mailto:ytbirhane@gmail.com", "_blank")}>
+                                <MailIcon />
+                            </IconButton>
+                        </Box>
                     </Stack>
-                </Grid>
-             </Grid>
+                </Box>
+            </Box>
         </ThemeProvider>
   );
 }
