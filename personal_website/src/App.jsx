@@ -3,7 +3,7 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { AppBar, Box, Divider, Grid, IconButton, Stack, Tab, Tabs, Typography } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
 import './App.css';
-
+import { Outlet } from 'react-router-dom';
 
 
 import { styled } from '@mui/system';
@@ -98,7 +98,7 @@ function App() {
             <Box sx={{display: 'flex', flexDirection: 'column', minHeight: '100vh'}}>
                 <Box sx={{flexGrow:1}}>
                     <NameAndNavigationBar />
-                    <HomePage />
+                    <Outlet />
                  </Box>
                 <BottomBar />
             </Box>
