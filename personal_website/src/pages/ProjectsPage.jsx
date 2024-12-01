@@ -1,6 +1,6 @@
-
+import Project from '../components/Project'
 export default function ProjectsPage(){
     return (
-        <div> Hello this is the projects Page</div>
+       <Project />
     )
 }
