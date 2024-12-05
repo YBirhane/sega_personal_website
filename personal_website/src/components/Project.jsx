@@ -1,11 +1,11 @@
 import { Box, Card, CardContent, CardHeader, CardMedia, Typography } from '@mui/material';
 
-export default function Project(){
+export default function Project({title, logo, tech, desc, git, live}){
     return (
         <Card
             sx={{
-                height: 450,
-                width: 350,
+                height: 425,
+                width: 325,
                 margin: 5,
                 backgroundColor: "background.default",
                 border: "10px double #b4bb73"
@@ -21,7 +21,7 @@ export default function Project(){
                             fontWeight: "bold"
                         }}
                     >
-                        Good Flicks
+                        {title}
                     </Typography>
                 }
             />
@@ -33,18 +33,27 @@ export default function Project(){
             >
                 <CardMedia
                     component="img"
-                    image="GoodFlicks.png"
+                    image={logo}
                     alt="Paella dish"
                     sx={{
-                        height: 150,
-                        width: 150,
+                        height: 125,
+                        width: 125,
                         justifyContent: "center"
                     }}
                 />
             </Box>
-            <CardContent sx={{color: "secondary", fontWeight: "bold"}}>
-                A social media iOS application that allowed users to track the movies they’ve watched and contact friends
-                for opinions on different movies. Programmed the application in Swift, integrated The Movie Database API to retrieve movie information, and used Firebase for backend services.
+            <CardContent sx={{color: "#461312"}}>
+                <Typography variant="subtitle2" sx={{margin:1}}>Tech: {tech}</Typography>
+                <Typography variant="body2" sx={{margin:1}}>{desc}</Typography>
+                <Typography color="#b4bb73" variant="subtitle1" sx={{margin: 1}}>
+                    {git && <a href={git} style={{color:'#b4bb73'}} target="_blank">GITHUB</a>   }
+                    {live &&
+                        <>
+                         {' '}|{' '}
+                        <a href={live} style={{color:'#b4bb73'}} target="_blank">LIVE</a>
+                        </>
+                    }
+                </Typography>
             </CardContent>
         </Card>
     )
