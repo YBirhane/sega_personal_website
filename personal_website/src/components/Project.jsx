@@ -4,7 +4,7 @@ export default function Project({title, logo, tech, desc, git, live}){
     return (
         <Card
             sx={{
-                height: 425,
+                height: 500,
                 width: 325,
                 margin: 5,
                 backgroundColor: "background.default",
@@ -16,7 +16,7 @@ export default function Project({title, logo, tech, desc, git, live}){
                     <Typography
                         color="primary.main"
                         align="center"
-                        variant="h4"
+                        variant="h5"
                         sx={{
                             fontWeight: "bold"
                         }}
@@ -34,18 +34,18 @@ export default function Project({title, logo, tech, desc, git, live}){
                 <CardMedia
                     component="img"
                     image={logo}
-                    alt="Paella dish"
                     sx={{
                         height: 125,
                         width: 125,
+                        objectFit: 'contain',
                         justifyContent: "center"
                     }}
                 />
             </Box>
-            <CardContent sx={{color: "#461312"}}>
-                <Typography variant="subtitle2" sx={{margin:1}}>Tech: {tech}</Typography>
-                <Typography variant="body2" sx={{margin:1}}>{desc}</Typography>
-                <Typography color="#b4bb73" variant="subtitle1" sx={{margin: 1}}>
+            <CardContent sx={{position:'relative', color: "#461312"}}>
+                <Typography variant="subtitle2" sx={{margin:1, height: 50, overflow: 'hidden'}}>Tech: {tech}</Typography>
+                <Typography variant="body2" sx={{margin:1, height: 130, overflow: 'hidden'}}>{desc}</Typography>
+                <Typography color="#b4bb73" variant="subtitle1" sx={{position: 'absolute', margin:1, bottom: 2 }}>
                     {git && <a href={git} style={{color:'#b4bb73'}} target="_blank">GITHUB</a>   }
                     {live &&
                         <>
