@@ -3,13 +3,14 @@ import FilterVintageIcon from '@mui/icons-material/FilterVintage';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import MailIcon from '@mui/icons-material/Mail';
+import ProfilePic from '../assets/ProfilePic.JPG';
 export default function HomePage(){
   return (
     <>
     <Grid container sx={{mt:6, ml:2}} spacing={1}>
         <Grid item sx={{display: 'flex', alignContent: 'center', justifyContent: 'left'}} lg={4} md={5} sm={8}>
                 <Box sx={{width: '350px', height: "475px", border: '15px solid #Cdd9C5' }}>
-                    <img style={{border: '15px solid #D9CCE0'}} width="350" height="475" src="ProfilePic.JPG"/>
+                    <img style={{border: '15px solid #D9CCE0'}} width="350" height="475" src={ProfilePic}/>
                 </Box>
         </Grid>
         <Grid item sx={{display: 'flex', alignContent: 'center', justifyContent: 'center', pr:5}} lg={8} md={7} sm={4}>
