@@ -4,7 +4,7 @@ export default function Project({title, logo, tech, desc, git, live}){
     return (
         <Card
             sx={{
-                height: 500,
+                height: 475,
                 width: 325,
                 margin: 5,
                 backgroundColor: "background.default",

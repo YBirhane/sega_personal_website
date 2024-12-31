@@ -26,13 +26,13 @@ export default function HomePage(){
                     variant="h6"
                     color="primary.main"
                 >
-                Hello, I’m Yeabtsega Birhane—you can call me Sega. I’m currently a contract Software Engineer at <a href="https://www.movementhealthscience.com/" style={{color:'#b4bb73'}} target="_blank">Movement Health Science</a>.
+                Hello, I’m Yeabtsega Birhane—you can call me Sega. I’m currently a contract Software Engineer at <a href="https://www.movementhealthscience.com/" target="_blank">Movement Health Science</a>.
                 <br />
                 <br />
-                I have over three years of experience as a Full Stack Engineer, working with: React, Vue, CSS, JavaScript, Django, and Python. I graduated from <a href="https://www.hmc.edu/" style={{color:'#b4bb73'}} target="_blank">Harvey Mudd College</a> in 2020 with a degree in Computer Science and Math.
+                I have over three years of experience as a Full Stack Engineer, working with: React, Vue, CSS, JavaScript, Django, and Python. I graduated from <a href="https://www.hmc.edu/" target="_blank">Harvey Mudd College</a> in 2020 with a degree in Computer Science and Math.
                 <br />
                 <br />
-                Feel free to check out my resume [here], my projects[here], and don’t hesitate to reach out via email with any questions or inquiries.
+                Feel free to check out my <a href="/resume" target="_blank">resume</a>, my <a href="/projects" target="_blank">projects</a>, and don’t hesitate to reach out <a href="mailto:ytbirhane@gmail.com">via email</a> with any questions or inquiries.
 
                 </Typography>
                 <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', p:0, border:'1px solid #FD9584' , width: 'fit-content'}}>
