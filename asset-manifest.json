@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.28313b1e.css",
-    "main.js": "/static/js/main.8df6d906.js",
-    "static/js/453.0437a03d.chunk.js": "/static/js/453.0437a03d.chunk.js",
-    "static/media/ProfilePic.JPG": "/static/media/ProfilePic.26f713b3f9d6807880f6.JPG",
-    "static/media/SJSLogo.png": "/static/media/SJSLogo.af19aab8d715a4eb33de.png",
-    "static/media/Resume_Birhane_2024.pdf": "/static/media/Resume_Birhane_2024.ac7927ad95eb3fe7e9c9.pdf",
-    "static/media/GoodFlicks.png": "/static/media/GoodFlicks.f237567a53a8adcf7bbf.png",
-    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/index.html",
-    "main.28313b1e.css.map": "/static/css/main.28313b1e.css.map",
-    "main.8df6d906.js.map": "/static/js/main.8df6d906.js.map",
-    "453.0437a03d.chunk.js.map": "/static/js/453.0437a03d.chunk.js.map"
+    "main.css": "/sega_personal_website/static/css/main.28313b1e.css",
+    "main.js": "/sega_personal_website/static/js/main.d5e73dc3.js",
+    "static/js/453.0437a03d.chunk.js": "/sega_personal_website/static/js/453.0437a03d.chunk.js",
+    "static/media/ProfilePic.JPG": "/sega_personal_website/static/media/ProfilePic.26f713b3f9d6807880f6.JPG",
+    "static/media/SJSLogo.png": "/sega_personal_website/static/media/SJSLogo.af19aab8d715a4eb33de.png",
+    "static/media/Resume_Birhane_2024.pdf": "/sega_personal_website/static/media/Resume_Birhane_2024.ac7927ad95eb3fe7e9c9.pdf",
+    "static/media/GoodFlicks.png": "/sega_personal_website/static/media/GoodFlicks.f237567a53a8adcf7bbf.png",
+    "static/media/logo.svg": "/sega_personal_website/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/sega_personal_website/index.html",
+    "main.28313b1e.css.map": "/sega_personal_website/static/css/main.28313b1e.css.map",
+    "main.d5e73dc3.js.map": "/sega_personal_website/static/js/main.d5e73dc3.js.map",
+    "453.0437a03d.chunk.js.map": "/sega_personal_website/static/js/453.0437a03d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.28313b1e.css",
-    "static/js/main.8df6d906.js"
+    "static/js/main.d5e73dc3.js"
   ]
 }
